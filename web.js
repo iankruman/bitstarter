@@ -8,7 +8,7 @@ var indexBuffer = new Buffer(fs.readFileSync("index.html"));
 var indexString = indexBuffer.toString();
 
 app.get('/', function(request, response) {
-  response.send('Hello World2!');
+  response.send(indexString);
 });
 
 var port = process.env.PORT || 5000;
